@@ -22,8 +22,8 @@ steps:
   displayName: 'Run a multi-line script'
 
 - task: Docker@2
-  displayName: dockerfile build
   inputs:
-    repository: $(imageName)
-    command: 'build'
+    containerRegistry: 'docker hub'
+    repository: 'kaniko'
+    command: 'buildAndPush'
     Dockerfile: 'app/Dockerfile'
