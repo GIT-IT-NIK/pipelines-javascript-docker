@@ -24,6 +24,6 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'docker hub'
-    repository: 'kaniko'
+    repository: 'aniketdewa / kaniko'
     command: 'buildAndPush'
     Dockerfile: 'app/Dockerfile'
